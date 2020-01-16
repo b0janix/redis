@@ -11,7 +11,7 @@ class RedisAdapter implements CacheInterface{
 
     public function __construct(Client $client)
     {
-
+        //comment added
         $this->client = $client;
 
     }
