@@ -17,10 +17,8 @@ $client->set('name', 'Bojan');
 
 $cache = new \App\Cache\RedisAdapter($client);
 
-//$cache->put('job', 'developer',1);
+$cache->remember('job', function (){
+    return "developer";
+});
 
 echo $cache->get('job');
-
-//echo $cache->remember('name', function (){
-//    return "Pero";
-//});
